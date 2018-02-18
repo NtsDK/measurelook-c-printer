@@ -1,33 +1,30 @@
-﻿# О проекте
+﻿# About project ([README Rus](https://github.com/NtsDK/measurelook-c-printer/wiki/README-RUS))
 
-В этом проекте находится принтер файла формата Measurelook для языка Си.
-Принтер реализован на основе bstring. В репозитории приведен полный пример
-организации вычислительного эксперимента, для демонстрации работы принтера
-на живом примере.
+This repo contains printer of Measurelook format for C language. Printer is based on bstring lib. In this repo you will find the full example of computational experiment which prints data in Measurelook.
 
-Проект сделан по шаблону из книги Зеда Шоу (Zed Shaw) Learn C The Hard Way.
+Project is based on Zed Shaw C project template from book Learn C The Hard Way.
 
-# Установка и запуск
+# Installation and run
 
-0. Скачать репозиторий
+0. Download repo
 1. make
 
-Проверялось на gcc 4.4.6.
+Checked with gcc 4.4.6.
 
-# Структура проекта
+# Project structure
 
 - src
   - lcthw
-    - mlBuilder - (от measurelook builder) - принтер файла Measurelook
-    - bstrlib - [библиотека работы со строками в Си](http://bstring.sourceforge.net/)
-  - distances - функции вычисления расстояний
-  - distancesPerformanceTest - тест производительности для функций вычисления расстояний
-  - env - вспомогательные функции получения параметров окружения в рантайме
-  - mlExtras - переиспользуемый вывод параметров окружения в результаты эксперимента
-  - dbg.h - отладочные макросы Зеда Шоу
-- testRes/distances - результаты запуска тестов производительности
+    - mlBuilder - (measurelook builder) - Measurelook file builder
+    - bstrlib - [string library for C](http://bstring.sourceforge.net/)
+  - distances - distance functions
+  - distancesPerformanceTest - distance functions performance test
+  - env - extra functions to get environment information in runtime
+  - mlExtras - reusable printing on environement information in experiment metainformation
+  - dbg.h - Zed Shaw's debug macros
+- testRes/distances - results of test run
 - tests
-  - env_tests - тесты получения переменных окружения в рантайме
-  - distances_performance_tests - запуск тестов производительности
-  - minunit.h - автозапуск тестов 
-  - runtests.sh - автозапуск тестов 
+  - env_tests - testing of environment information getters in runtime
+  - distances_performance_tests - performance test starter
+  - minunit.h - test autostarter 
+  - runtests.sh - test autostarter
